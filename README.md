@@ -1,36 +1,64 @@
-# Music Data Analysis
+# Music Popularity Analysis
 
 ## Project Overview
 
-This project performs an in-depth exploratory data analysis (EDA) on a dataset of songs. The goal is to uncover insights into the characteristics of popular music, understand the relationships between different audio features, and build a predictive model to estimate a song's popularity based on these features.
+This project analyzes a dataset of songs to uncover insights into the characteristics of popular music. It includes an exploratory data analysis (EDA), a predictive model, and an interactive Streamlit dashboard to visualize the findings.
+
+## Features
+
+*   **Exploratory Data Analysis:** In-depth analysis of audio features, genres, and song popularity.
+*   **Predictive Modeling:** A linear regression model to predict song popularity based on audio features.
+*   **Interactive Dashboard:** A Streamlit application to visualize the data and model insights.
 
 ## Dataset
 
-The dataset, `dataset.csv`, contains various audio features and metadata for a large collection of songs. Key columns include:
+The dataset used in this project is `dataset.csv`, which contains various audio features and metadata for a large collection of songs. The dataset is compressed in `dataset.zip`.
 
-*   `track_name`: The name of the song.
-*   `artists`: The artist(s) of the song.
-*   `popularity`: A score from 0 to 100, indicating the song's popularity.
-*   `track_genre`: The genre of the track.
-*   Audio features like `danceability`, `energy`, `loudness`, `acousticness`, `instrumentalness`, `valence`, and `tempo`.
+## Getting Started
 
-## Installation
+### Prerequisites
 
-To run this analysis, you need Python and the following libraries:
+*   Python 3.7+
+*   pip
 
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-```
+### Installation
 
-## Usage
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/music-popularity-analysis.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd music-popularity-analysis
+    ```
+3.  Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-The entire analysis is contained within the `project_music.ipynb` Jupyter Notebook. To view and run the analysis, start Jupyter Lab:
+### Usage
+
+To explore the data and the model, you can use the Jupyter Notebook or the Streamlit dashboard.
+
+#### Jupyter Notebook
+
+The `project_music.ipynb` notebook contains the full analysis, from data cleaning to model building. To use it, start Jupyter Lab:
 
 ```bash
 jupyter lab
 ```
 
 Then, open the `project_music.ipynb` file.
+
+#### Streamlit Dashboard
+
+The Streamlit dashboard provides an interactive way to explore the data. To run it, use the following command:
+
+```bash
+streamlit run app.py
+```
+
+This will open the dashboard in your web browser.
 
 ## Analysis Summary
 
@@ -46,4 +74,4 @@ The analysis covers three main stages:
 *   **Genre Insights:** Genres like 'pop', 'rock', and 'dance' have the highest average popularity scores.
 *   **Feature Correlation:** `energy` and `loudness` are strongly positively correlated, while `acousticness` and `energy` are strongly negatively correlated.
 *   **Modeling:** The predictive model shows that while audio features have some predictive power, they don't fully explain popularity, suggesting that other factors (like artist fame, marketing, etc.) are also highly influential.
-# music-popularity-analysis
+
